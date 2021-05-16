@@ -3,17 +3,28 @@ var expr2 = "";
 var opr = "";
 
 function oper(operate){
-    // UPDATE - A problem left here
-    // 
-    // an operator is entered
-
     if(opr == ""){
         opr = operate;
     }
     else{
-        calculate();
-        opr = operate;
+        if(expr2 == ""){
+            opr = operate;
+        }
+        else{
+            calculate();
+            opr = operate;
+        }
     }
+
+    display();
+}
+
+function erase(){
+    expr1 = "";
+    expr2 = "";
+    opr = "";
+
+    display();
 }
 
 function append(num){

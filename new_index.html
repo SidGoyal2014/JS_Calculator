@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Web Calculator</title>
+
+        <link rel="stylesheet" href="./css/new_calc.css">
+        <script type="text/javascript" src="./js/new_calc.js"></script>
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        
+        <div class="container my-4">  
+
+            <!-----
+            <p>Built with <a target="_blank" href="https://mdbootstrap.com/docs/standard/">Material Design for Bootstrap</a> - free and powerful Bootstrap UI KIT</p>
+            
+            <a class="btn btn-primary me-2" href="https://mdbootstrap.com/docs/standard/getting-started/installation/" target="_blank" role="button">Download MDB UI KIT <i class="fas fa-download ms-2"></i></a>
+            <a class="btn btn-danger me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/" role="button">Learn more</a>
+            <a class="btn btn-success me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/getting-started/" role="button">Tutorials</a>
+            <a class="btn btn-dark me-2" target="_blank" href="https://github.com/mdbootstrap/mdb-ui-kit" role="button">GitHub <i class="fab fa-github ms-2"></i></a>
+            
+            <hr class="mb-5"/>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            ---->
+
+
+            <div class="calculator card" style="display: flex;">
+                <label class="operator btn btn-info" style="font-size: 15px;">Web Calculator</label>
+            
+                <div class="calculator-screen z-depth-1" id="res"></div> 
+                <!---<input type="text" id="res"  value="" disabled />-->
+
+                <div class="calculator-keys">
+            
+                    <button type="button" class="operator btn btn-info" value="+" onclick="oper('+')">+</button>
+                    <button type="button" class="operator btn btn-info" value="-" onclick="oper('-')">-</button>
+                    <button type="button" class="operator btn btn-info" value="*" onclick="oper('*')">&times;</button>
+                    <button type="button" class="operator btn btn-info" value="/" onclick="oper('/')">&divide;</button>
+                
+                    <button type="button" value="7" class="btn btn-light waves-effect" onclick="append('7')">7</button>
+                    <button type="button" value="8" class="btn btn-light waves-effect" onclick="append('8')">8</button>
+                    <button type="button" value="9" class="btn btn-light waves-effect" onclick="append('9')">9</button>
+                
+                
+                    <button type="button" value="4" class="btn btn-light waves-effect" onclick="append('4')">4</button>
+                    <button type="button" value="5" class="btn btn-light waves-effect" onclick="append('5')">5</button>
+                    <button type="button" value="6" class="btn btn-light waves-effect" onclick="append('6')">6</button>
+                
+                
+                    <button type="button" value="1" class="btn btn-light waves-effect" onclick="append('1')">1</button>
+                    <button type="button" value="2" class="btn btn-light waves-effect" onclick="append('2')">2</button>
+                    <button type="button" value="3" class="btn btn-light waves-effect" onclick="append('3')">3</button>
+                
+                
+                    <button type="button" value="0" class="btn btn-light waves-effect" onclick="append('0')">0</button>
+                    <button type="button" class="decimal function btn btn-secondary" value="." onclick="append('.')">.</button>
+                    <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear" onclick="erase()">AC</button>
+                
+                    <button type="button" class="equal-sign operator btn btn-default" value="=" onclick="calculate()">=</button>
+            
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
