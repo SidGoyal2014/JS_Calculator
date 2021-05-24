@@ -2,6 +2,16 @@ var expr1 = "";
 var expr2 = "";
 var opr = "";
 
+function ifLimitExceed(){
+    if(expr1.length > 15 || expr2.length > 15){
+        // res.innerHTML = "Limit exceed";
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 function oper(operate){
     if(opr == ""){
         opr = operate;
@@ -38,7 +48,12 @@ function append(num){
         expr2 = expr2 + num;
     }
 
-    display();
+    if(ifLimitExceed()){
+        reset_buffer();
+    }
+    else{
+        display();
+    }
 }
 
 function calculate(){
@@ -47,9 +62,22 @@ function calculate(){
     expr2 = "";
     opr = "";
 
-    display();
+    if(ifLimitExceed()){
+        reset_buffer();
+    }
+    else{
+        display();
+    }
 }
 
 function display(){
     res.innerHTML = expr1 + opr + expr2;
+}
+
+function reset_buffer(){
+    expr1 = "";
+    expr2 = "";
+    opr = "";
+
+    res.innerHTML = "Limit Exceed";
 }
