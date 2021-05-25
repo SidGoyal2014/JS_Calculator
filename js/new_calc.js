@@ -1,5 +1,3 @@
-console.log("hi there!");
-
 var expr1 = "";
 var expr2 = "";
 var opr = "";
